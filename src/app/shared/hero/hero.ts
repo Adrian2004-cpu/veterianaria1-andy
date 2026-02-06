@@ -2,15 +2,15 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
+  standalone: true,
   imports: [],
   templateUrl: './hero.html',
-  styleUrl: './hero.css',
+  styleUrl: './hero.css'
 })
 export class Hero {
-  //los datos vacios que llenaremos en cada uso del componente
   @Input() titulo!: string;
-  @Input() subtitulo!: string;
-  @Input() textoBoton!: string;
-  @Input() imagen!: string;
-  @Input() colorFondo!:string;
+  @Input() tituloNegrita!: string;      // Lo usaremos para el texto en color azul
+  @Input() subtitulo!: string;    // Frase corta e impactante
+  @Input() descripcion!: string;  // Párrafo explicativo más largo
+  @Input() imagen!: string;       // Ruta de la imagen
 }

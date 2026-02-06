@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AcercaVision {
 @Input() tituloVision!: string;
+@Input() imagenVision!: string;
 }

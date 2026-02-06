@@ -1,10 +1,11 @@
 <section class="bg-slate-50 py-16">
     <div class="container flex flex-col items-center px-6 mx-auto xl:flex-row">
         <div class="flex justify-center xl:w-1/2 relative">
-            <div class="absolute -top-4 -left-4 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <img class="relative h-80 w-80 sm:w-[30rem] sm:h-[30rem] flex-shrink-0 object-cover rounded-2xl shadow-2xl"
-                src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop"
-                alt="Veterinario cuidando mascota">
+            <div
+                class="absolute -top-4 -left-4 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+            </div>
+            <img [src]="imagenMision" alt="Veterinario cuidando mascota"
+                class="relative h-80 w-full sm:w-[41rem] sm:h-[30rem] flex-shrink-0 object-cover rounded-2xl shadow-2xl">
         </div>
 
         <div class="flex flex-col items-center mt-10 xl:items-start xl:w-1/2 xl:mt-0 xl:pl-12">
@@ -14,19 +15,27 @@
             </h2>
 
             <p class="block max-w-2xl mt-4 text-lg text-slate-600 leading-relaxed text-center xl:text-left">
-                Brindar una atención médica integral y compasiva a cada mascota que cruza nuestras puertas. Nos dedicamos a mejorar la calidad de vida de los animales y fortalecer el vínculo con sus familias a través de tecnología de vanguardia y un equipo humano altamente calificado.
+                Brindar una atención médica integral y compasiva a cada mascota que cruza nuestras puertas. Nos
+                dedicamos a mejorar la calidad de vida de los animales y fortalecer el vínculo con sus familias a través
+                de tecnología de vanguardia y un equipo humano altamente calificado.
             </p>
-            
+
             <div class="mt-6 grid grid-cols-2 gap-4 w-full">
                 <div class="flex items-center space-x-2 text-slate-700">
                     <div class="p-1 bg-green-100 rounded-full text-green-600">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
                     </div>
                     <span class="text-sm font-medium">Ética Profesional</span>
                 </div>
                 <div class="flex items-center space-x-2 text-slate-700">
                     <div class="p-1 bg-green-100 rounded-full text-green-600">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
                     </div>
                     <span class="text-sm font-medium">Amor Animal</span>
                 </div>
@@ -34,4 +43,3 @@
         </div>
     </div>
 </section>
-

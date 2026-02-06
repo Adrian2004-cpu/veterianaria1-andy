@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AcercaMision {
 @Input() tituloMision!: string;
-  
+  @Input() imagenMision!: string;
 }

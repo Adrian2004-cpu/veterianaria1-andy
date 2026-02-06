@@ -1,43 +1,38 @@
 <div class="flex flex-wrap justify-center gap-8 p-25 bg-gray-100 min-h-screen">
 
+    @for (item of tarjetas; track item.titulo) {
     <div class="max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 py-8">
-        <img class="object-cover w-full h-64" src="/images/consulta-medica.png" alt="Article">
+
+        <img class="object-cover w-full h-64" [src]="item.imagen" [alt]="item.titulo">
 
         <div class="p-6">
             <div>
-                <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">Product</span>
-                <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline">Consulta Médica</a>
-                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel.</p>
+                <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">
+                    {{ item.categoria }}
+                </span>
+
+                <a href="#"
+                    class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline">
+                    {{ item.titulo }}
+                </a>
+
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    {{ item.descripcion }}
+                </p>
             </div>
 
             <div class="mt-4">
                 <div class="flex items-center">
-                    <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200">Jone Doe</a>
-                    <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
+                    <img class="object-cover h-10 rounded-full" [src]="item.avatar" alt="Avatar">
+                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200">
+                        {{ item.autor }}
+                    </a>
+                    <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">
+                        {{ item.fecha }}
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 py-8">
-        <img class="object-cover w-full h-64" src="/images/estetica-canina-.jpg" alt="Article">
-
-        <div class="p-6">
-            <div>
-                <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">Product</span>
-                <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline">Estética y Bienestar</a>
-                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel.</p>
-            </div>
-
-            <div class="mt-4">
-                <div class="flex items-center">
-                    <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200">Jone Doe</a>
-                    <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    }
 </div>

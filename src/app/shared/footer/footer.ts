@@ -14,8 +14,9 @@ export class Footer {
     { texto: "Home", link: "home" },
     { texto: "Acerca", link: "acerca" },
     { texto: "Consultas", link: "consultas" },
-    { texto: "Mascotas", link: "#" },
-    { texto: "Contacto", link: "#" },
-    { texto: "Registro", link: "#" },
+    { texto: "Mascotas", link: "mascotas" },
+    { texto: "Contacto", link: "contacto" },
+    { texto: "Usuarios", link: "usuarios" },
+    { texto: "Registro", link: "registro" },
   ];
 }

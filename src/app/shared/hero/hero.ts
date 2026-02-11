@@ -13,4 +13,5 @@ export class Hero {
   @Input() subtitulo!: string;    // Frase corta e impactante
   @Input() descripcion!: string;  // Párrafo explicativo más largo
   @Input() imagen!: string;       // Ruta de la imagen
+  @Input() botonTexto!: string;
 }

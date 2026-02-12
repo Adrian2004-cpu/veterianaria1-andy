@@ -9,21 +9,21 @@
 
         <div class="mb-5">
             <label for="email-alternative" class="block mb-2 text-sm font-semibold text-heading">Correo Electrónico</label>
-            <input  type="email" id="email-alternative"
+            <input formControlName="email" id="email" type="email" id="email-alternative"
                 class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-2 focus:ring-brand focus:border-brand block w-full px-4 py-3 transition-all placeholder:text-gray-400 outline-none"
                 placeholder="nombre@ejemplo.com" required />
         </div>
 
         <div class="mb-5">
             <label for="password-alternative" class="block mb-2 text-sm font-semibold text-heading">Contraseña</label>
-            <input type="password" id="password-alternative"
+            <input formControlName="password" type="password" id="password-alternative"
                 class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-2 focus:ring-brand focus:border-brand block w-full px-4 py-3 transition-all placeholder:text-gray-400 outline-none"
                 placeholder="••••••••" required />
         </div>
 
         <div class="mb-6">
             <label for="confirm-password-alternative" class="block mb-2 text-sm font-semibold text-heading">Confirmar Contraseña</label>
-            <input type="password" id="confirm-password-alternative"
+            <input formControlName="repeatPassword" type="password" id="confirm-password-alternative"
                 class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-2 focus:ring-brand focus:border-brand block w-full px-4 py-3 transition-all placeholder:text-gray-400 outline-none"
                 placeholder="••••••••" required />
         </div>

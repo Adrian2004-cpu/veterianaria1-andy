@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { UsuarioServicio } from '../../services/usuario-servicio';
 import { Usuario } from '../../models/usuario';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth-service/auth-service';
 
 @Component({
   selector: 'app-formulario',
@@ -11,6 +12,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class Formulario {
   private servicioUsuario = inject(UsuarioServicio);
+
+
+// para el rol de empleado que no vea las acciones dfe eliminar y editar
+
+
+public servicioAuth = inject(AuthService);
+
   //lista reactiva para almacenar los usuarios, signal es una función que cre uan señal reactiva que se puede actualizar y suscribirse a cambios 
   listaUsuarios = signal<Usuario[]>([]);
 
@@ -20,6 +28,8 @@ export class Formulario {
     name: '',
     email: '',
     phone: '',
+    password:'',
+    rol:'EMPLEADO'
   };
   //Metodo para agregar u nuevo usuario a la lista
   ngOnInit() {
@@ -66,7 +76,7 @@ export class Formulario {
   //metodo para limpiar el formulario y salir del modo edicion
   resetear() {
     this.editando = false;
-    this.nuevoUsuario = { name: '', email: '', phone: '' };
+    this.nuevoUsuario = { name: '', email: '', phone: '',password:'', rol:'EMPLEADO' };
   }
 }
 

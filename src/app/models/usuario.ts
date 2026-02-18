@@ -3,4 +3,8 @@ export interface Usuario{
     name:string;
     email:string;
     phone:string;
+    password:string;
+    //ROLES
+
+    rol:'ADMIN' | 'EMPLEADO';
 }

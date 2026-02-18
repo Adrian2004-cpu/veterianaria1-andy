@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app";
 export const firebaseConfig = {
   apiKey: "AIzaSyCBJJWBLNMFMo_N1vfFewOaceqlLl-Jlm8",
   authDomain: "veterinaria-eba1f.firebaseapp.com",
-  databaseURL: "https://veterinaria-eba1f-default-rtdb.firebaseio.com",
+  databaseURL: "https://veterinaria-eba1f-default-rtdb.firebaseio.com/",
   projectId: "veterinaria-eba1f",
   storageBucket: "veterinaria-eba1f.firebasestorage.app",
   messagingSenderId: "896257404029",

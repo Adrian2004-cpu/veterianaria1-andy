@@ -8,7 +8,7 @@ import { Usuario } from '../models/usuario';
 })
 export class UsuarioServicio {
   private http = inject(HttpClient);
-  private API_URL = 'https://evaluacion-dos-86884-default-rtdb.firebaseio.com/';
+  private API_URL = 'https://veterinaria-eba1f-default-rtdb.firebaseio.com/';
 
   //Metodo get para obtener los usuarios
   /*getUsuarios():Observable<Usuario[]>{

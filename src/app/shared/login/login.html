@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Login - Veterinaria VetCare</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; text-align: center; }
-        .logo { font-size: 50px; margin-bottom: 10px; }
-        h2 { color: #2c3e50; margin-bottom: 1.5rem; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        button { width: 100%; padding: 12px; background-color: #4a90e2; border: none; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; transition: background 0.3s; }
-        button:hover { background-color: #357abd; }
-        .footer-links { margin-top: 1rem; font-size: 0.85rem; color: #7f8c8d; }
-    </style>
-</head>
-<body>
-    <div class="login-card">
-        <div class="logo">🐾</div>
-        <h2>Veterinaria</h2>
-        <form>
-            
-            <input [(ngModel)]="email" type="email" placeholder="Correo del Especialista" required>
-            <input  [(ngModel)]="password" type="password" placeholder="Contraseña" required>
-            <button (click)="iniciarsecion()" type="submit">Entrar al Sistema</button>
-             <button (click)="cerrarsesion()" type="submit">Cerrar Sesion </button>
-        </form>
-        <div class="footer-links">
-            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-            <p>¿Nuevo personal? <a href="#">Solicitar acceso</a></p>
-        </div>
+<form (ngSubmit)="iniciarsecion()" class="max-w-sm mx-auto mt-10">
+    <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+        <input [(ngModel)]="email" name="email"
+        type="email" id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="name@flowbite.com" required />
     </div>
-</body>
-</html>
+    <div class="mb-5">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Your password</label>
+        <input [(ngModel)]="password" name="password"
+        type="password" id="password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            required />
+    </div>
+    <div class="flex items-start mb-5">
+    </div>
+    <button (click)="iniciarsecion()" type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center mr-32">Iniciar sesión</button>
+        <button (click)="cerrarsesion()" type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cerrar sesión</button>
+</form>

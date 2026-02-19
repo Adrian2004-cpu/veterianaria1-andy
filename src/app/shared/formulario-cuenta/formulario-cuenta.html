@@ -18,33 +18,22 @@
   </div>
 
   <div class="mb-5">
-    <label class="block mb-2 text-sm font-medium">Your password</label>
-    <input formControlName="password" type="password" class="block w-full p-2.5 border rounded-lg" />
-
-    @if(formCuenta.get('password')?.invalid && formCuenta.get('password')?.touched){
+    <label for ="comentario" class="block mb-2 text-sm font-medium">Your message</label>
+    <textarea formControlName="comentario" name ="comentario" id ="comentario"class="block w-full p-2.5 border rounded-lg"></textarea>
+  
+    @if(formCuenta.get('comentario')?.invalid && formCuenta.get('comentario')?.touched){
       <p class="text-red-600 text-sm mt-2">
-        Debe tener mínimo 8 caracteres, incluir letras y números
+    su comentaraio es requerido
       </p>
     }
   </div>
 
-  <!-- REPEAT PASSWORD -->
-  <div class="mb-5">
-    <label class="block mb-2 text-sm font-medium">Repeat password</label>
-    <input formControlName="repeatPassword" type="password" class="block w-full p-2.5 border rounded-lg" />
-
-    @if(formCuenta.hasError('noCoinciden') && formCuenta.get('repeatPassword')?.touched){
-      <p class="text-red-600 text-sm mt-2">
-        Las contraseñas no coinciden
-      </p>
-    }
-  </div>
 
   <button 
     type="submit"
     [disabled]="formCuenta.invalid"
     class="bg-blue-600 text-white px-5 py-2 rounded-lg">
-    Registrar
+    Enviar mensaje
   </button>
 
 </form>

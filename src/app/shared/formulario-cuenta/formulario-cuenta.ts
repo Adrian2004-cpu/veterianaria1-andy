@@ -71,11 +71,10 @@ export class FormularioCuenta {
           this.formCuenta.reset();
         })
         //si la promesa no se cumple
-        .catch((error)=>{
-          alert("No se puede enviar los datos");
-        })
-      
+        .catch((error)=>
+          console.log("no se puede enviar los datos",error));
+        }
 
 }
   }
-}
+
